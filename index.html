@@ -33,7 +33,7 @@
       <input
        v-model.trim = "newTodo"  
        @keyup.enter="addTodo"
-       placeholder="Nuovo task"type="text"
+       placeholder="Nuova task"type="text"
        >
        
       <button 
@@ -52,7 +52,7 @@
          >
           <span >{{task.title}}</span>
           <i 
-          @click.stop="removeTask(index)"
+          @click.stop = "removeTask(index)"
           class="fa-solid fa-trash-can"
           ></i>
         </li>
