@@ -11,10 +11,18 @@ const app = createApp({
         {title: 'Learn Angular', done: true},
 
       ],
+      newTodo: '',
+
+
 
     }
   },
   methods: {
-    
-  }
-}).mount('#app')
+        addTodo() {
+          this.todo.push({
+            title: this.newTodo,
+            done: false
+          });
+        }
+      }
+    }).mount('#app');
