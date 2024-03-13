@@ -44,7 +44,11 @@
     <div class="task-container">
       <ul>
 
-        <li :class="{'done' : task.done}" v-for="(task,index) in todo">
+        <li 
+        v-for="(task,index) in todo"
+        @click="task.done = !task.done"
+        :class="{'done' : task.done}"
+         >
           <span >{{task.title}}</span>
           <i 
           @click.stop="removeTask(index)"
