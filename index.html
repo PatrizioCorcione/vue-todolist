@@ -35,7 +35,9 @@
        @keyup.enter="addTodo"
        placeholder="Nuovo task"type="text"
        >
-      <button @click="addTodo" >Aggiungi</button>
+      <button 
+      @click="addTodo" 
+      >Aggiungi</button>
       <p class="error"></p>
     </div>
 
@@ -44,7 +46,10 @@
 
         <li :class="{'done' : task.done}" v-for="(task,index) in todo">
           <span >{{task.title}}</span>
-          <i class="fa-solid fa-trash-can"></i>
+          <i 
+          @click.stop="removeTask(index)"
+          class="fa-solid fa-trash-can"
+          ></i>
         </li>
 
       </ul>

@@ -18,11 +18,16 @@ const app = createApp({
     }
   },
   methods: {
+
         addTodo() {
           this.todo.push({
             title: this.newTodo,
             done: false
           });
-        }
+        },
+
+        removeTask (index) {
+          this.todo.splice(index, 1);
+        },
       }
     }).mount('#app');
