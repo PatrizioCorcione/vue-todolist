@@ -12,15 +12,23 @@ const app = createApp({
 
       ],
       newTodo: '',
+      error: '',
     }
   },
   methods: {
 
         addTodo() {
-          this.todo.push({
+
+          if (this.newTodo.length >= 4) {
+            this.todo.push({
             title: this.newTodo,
             done: false
           });
+          }else {
+            this.error= "Attenzione metti almeno una parola di 4 lettere!";
+          }  
+          
+          
         },
 
         removeTask (index) {
