@@ -42,7 +42,7 @@
     </div>
 
     <div class="task-container">
-      <ul>
+      <ul v-if="todo.length > 0">
 
         <li 
         v-for="(task,index) in todo"
@@ -57,6 +57,8 @@
         </li>
 
       </ul>
+      <h1 class="text-center " v-else>Non ci sono task</h1>
+
 
     </div>
 

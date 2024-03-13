@@ -12,9 +12,6 @@ const app = createApp({
 
       ],
       newTodo: '',
-
-
-
     }
   },
   methods: {
